@@ -1,0 +1,12 @@
+* {
+    background-color: burlywood;
+    color: black;
+    flex-direction: row;
+    text-align: center;
+    padding: 5px;
+}
+
+.Title {
+    padding: 1px;
+    text-align: center;
+}
