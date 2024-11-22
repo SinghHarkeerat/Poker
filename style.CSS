@@ -1,12 +1,37 @@
-* {
-    background-color: burlywood;
+body {
     color: black;
+    background-image: url(./images/background/table.jpg);
+    background-position: 0px -100px;
     flex-direction: row;
     text-align: center;
     padding: 5px;
 }
 
-.Title {
-    padding: 1px;
+#hand {
     text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    color: white;
 }
+
+
+/* .actions button {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(10, 135, 84);
+}
+
+.actions #play {
+    cursor: pointer;
+    position: relative;
+}
+
+.actions #check {
+    cursor: pointer;
+    position: relative;
+}
+
+.actions #raise {
+    cursor: pointer;
+    position: relative;
+} */

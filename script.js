@@ -5,7 +5,7 @@ class Card {
     }
 
     toString() {
-        return suit + "" + this.num;
+        return `${this.num}${this.suit}`;
     }
 }
 
@@ -26,7 +26,7 @@ class Deck {
     }
 }
 
-//deck works
+//deck workds
 const a = new Deck();
 const deck = a.createDeck();
 
@@ -40,17 +40,20 @@ function shuffleDeck() {
 }
 
 function dealHand() {
+    shuffleDeck();
 
-    rand1 = Math.floor(Math.random() * 51)
-    rand2 = Math.floor(Math.random() * 50)
+    for (let i = 0; i < 2; i++) {
+        hand.push(deck.pop());
+    }
 
-    hand.push(deck[rand1]);
-    hand.splice(rand1, 1)
-
-    hand.push(deck[rand2]);
-    hand.splice(rand2, 1)
+    const handDiv = document.getElementById('hand');
+    handDiv.textContent = `${hand.join(', ')}`;
 }
-shuffleDeck()
-dealHand()
 
-document.write(hand)
+function loadHand() {
+
+}
+
+
+
+window.onload = dealHand;
