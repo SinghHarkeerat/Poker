@@ -8,30 +8,42 @@ body {
 }
 
 #hand {
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: larger;
-    color: white;
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    gap: 25px;
+    justify-content: center;
 }
 
-
-/* .actions button {
-    width: 150px;
-    height: 100px;
-    background-color: rgb(10, 135, 84);
+#hand img {
+    height: 200px; 
+    width: auto; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.actions #play {
+#hand img:hover {
+    transform: scale(1.2) rotate(3deg); 
     cursor: pointer;
-    position: relative;
 }
 
-.actions #check {
-    cursor: pointer;
-    position: relative;
+#table {
+    position: fixed; 
+    left: 50%; 
+    transform: translateX(-50%) translateY(160%); 
+    display: flex;
+    gap: 20px;
+    justify-content: center;
 }
 
-.actions #raise {
-    cursor: pointer;
-    position: relative;
-} */
+#table img {
+    height: 200px; 
+    width: auto; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
