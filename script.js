@@ -11,7 +11,7 @@ class Card {
 
 class Deck {
     constructor() {
-        this.suits = ["H", "D", "C", "S"];
+        this.suits = ["h", "d", "c", "s"];
         this.num = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
     }
 
@@ -46,14 +46,25 @@ function dealHand() {
         hand.push(deck.pop());
     }
 
+    const img1 = hand[0] + "";
+    const img2 = hand[1] + "";
+    
+    console.log("working 111")
+    loadHand(img1);
+    loadHand(img2);
+    console.log("working 222")
     const handDiv = document.getElementById('hand');
     handDiv.textContent = `${hand.join(', ')}`;
 }
 
-function loadHand() {
+function loadHand(i) {
+    const img = i;
+    const num = img.substr(0, 1);
+    const suit = img.substr(1, 2);
+    const address = "images/deck/" + num + "-" + suit + ".svg"
+    console.log(address)
 
-}
-
+}   
 
 
 window.onload = dealHand;
